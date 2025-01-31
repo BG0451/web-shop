@@ -1,0 +1,20 @@
+.form-container {
+  margin: 20px auto;
+  width: 200px;
+  background-color: #549fcb;
+  padding: 30px 50px;
+  border-radius: 3px;
+  color: #2d4c6a;
+}
+
+form {
+  display: table;
+}
+
+h2 {
+  display: inline;
+}
+
+label {
+  font-size: larger;
+}

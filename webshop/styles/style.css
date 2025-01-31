@@ -1,0 +1,154 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #1a2a3b;
+  color: #c4d3de;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #2a475e;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas:
+    "title title title"
+    "developer release price"
+    "publisher release price";
+  gap: 10px;
+  padding: 10px;
+  background-color: #213648;
+}
+
+.grid-item:hover {
+  background-color: #95bbd4;
+  color: #1a2a3b;
+}
+
+.title {
+  grid-area: title;
+  font-size: large;
+  font-weight: 600;
+}
+.developer {
+  grid-area: developer;
+  font-size: smaller;
+}
+.publisher {
+  grid-area: publisher;
+  font-size: smaller;
+}
+.release {
+  grid-area: release;
+  overflow: hidden;
+}
+.price {
+  grid-area: price;
+  text-align: right;
+}
+
+.gameLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+#pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.page-button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.page-button:hover {
+  background-color: #0056b3;
+}
+
+.page-button.disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.search-sort-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #28407e;
+  background-color: #316282;
+  color: #a1aab9;
+}
+
+#sort-select {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #28407e;
+  background-color: #549fcb;
+  color: #2d4c6a;
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    width: 100%;
+  }
+
+  .release {
+    display: none;
+  }
+
+  .publisher {
+    display: none;
+  }
+
+  .developer {
+    display: none;
+  }
+
+  .search-sort-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #search-input,
+  #sort-select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-item {
+    grid-template-columns: 100px 1fr;
+  }
+}

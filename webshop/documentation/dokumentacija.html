@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dokumentacija</title>
+  </head>
+  <body>
+    <h1>Webshop projekt</h1>
+    <p>
+      Kreirati program u web razvojnom okruženju koji služi za prodaju
+      digitalnih video igara. Koristeći zadani izvor podataka potrebno je
+      dodavati, prikazati, izmjenjivati i brisati podatke.
+    </p>
+    <p>
+      Projekt omogučava korisniku da stvori novi račun, logira se, odjavi se,
+      kupi igru, vrati igru i gleda svoju listu igara.
+    </p>
+    <p>
+      Projekt omogučava administatoru da stvori igru, izbriše igru, update-a
+      igru, postavi server postavke i skine backup SQL baze.
+    </p>
+    <p>
+      Krošteni alati su: HTML, CSS, JavaScript, PHP, SQL uz pomoć XAMPP-a koji
+      uključuje Apache server i MySQL
+    </p>
+    <h1>UML Dijagram</h1>
+    <img src="UML.jpg" alt="UML" />
+    <h1>ER Dijagram</h1>
+    <img src="ER.jpg" alt="ER" />
+    <h1>Popis Mapa i Datoteka u webshop/</h1>
+    <p>add_game/</p>
+    <ul>
+      <li>index.php</li>
+      <li>add_game.js</li>
+      <li>add_game.php</li>
+    </ul>
+    <p>backup_db/</p>
+    <ul>
+      <li>index.php</li>
+      <li>backup.sql</li>
+    </ul>
+    <p>contact/</p>
+    <ul>
+      <li>index.php</li>
+      <li>send_email.php</li>
+    </ul>
+    <p>documentation/</p>
+    <ul>
+      <li>autor.html</li>
+      <li>dokuemtacija.html</li>
+      <li>ER.jpeg</li>
+      <li>UML.jpeg</li>
+      <li>profil.jpeg</li>
+    </ul>
+    <p>game_page/</p>
+    <ul>
+      <li>index.php</li>
+      <li>game_page.js</li>
+      <li>purchase_game.php</li>
+      <li>refund_game.php</li>
+      <li>update_game.php</li>
+      <li>delete_game.php</li>
+    </ul>
+    <p>login/</p>
+    <ul>
+      <li>index.php</li>
+      <li>login.js</li>
+      <li>login.php</li>
+    </ul>
+    <p>logout/</p>
+    <ul>
+      <li>index.php</li>
+      <li>logout.js</li>
+      <li>logout.php</li>
+    </ul>
+    <p>message/</p>
+    <ul>
+      <li>index.php</li>
+    </ul>
+    <p>set_config/</p>
+    <ul>
+      <li>index.php</li>
+      <li>set_config.js</li>
+      <li>set_config.php</li>
+    </ul>
+    <p>signup/</p>
+    <ul>
+      <li>index.php</li>
+      <li>signup.js</li>
+      <li>signup.php</li>
+    </ul>
+    <p>styles/</p>
+    <ul>
+      <li>form.css</li>
+      <li>game_page.css</li>
+      <li>style.css</li>
+    </ul>
+    <p>templates/</p>
+    <ul>
+      <li>header.tpl.php</li>
+      <li>footer.tpl.php</li>
+    </ul>
+    <p>userLibrary/</p>
+    <ul>
+      <li>index.php</li>
+      <li>userLibrary.js</li>
+      <li>userLibrary.php</li>
+    </ul>
+    <p>util/</p>
+    <ul>
+      <li>admin_restrict.php</li>
+      <li>check_username.php</li>
+      <li>db.php.php</li>
+      <li>protected_page.php</li>
+      <li>server_config.php</li>
+      <li>session_control.php</li>
+      <li>log_user_action.php</li>
+    </ul>
+    <p>index.php</p>
+    <p>game_list_script.js</p>
+    <p>fetch_games.php</p>
+    <p>.htaccess</p>
+    <p>rss.xml</p>
+    <h1>Problemi u radu</h1>
+    <p>
+      1. Backup baze podataka nije siguran iako je stranica za njegovo
+      preuzimanje sigurna.
+    </p>
+    <p>
+      2. Admin može brisati igre i preko njih cascade na user library-a time
+      poništavajući svim user-ima kupnje proizvoda.
+    </p>
+    <p>
+      3. Kada admin mijenja ili dodaje igre nema nikakav server-side ni
+      client-side check koji bi spriječio upis ne validnih podataka npr. slova
+      umjesto datuma.
+    </p>
+    <p>
+      4. Footer nemože imati style u svom kodu nego se mora oslanjati na drugi
+      file za style import.
+    </p>
+  </body>
+</html>
